@@ -1,5 +1,4 @@
 import random
-from webbrowser import get
 from words import words
 def get_word():
     word = random.choice(words)
@@ -19,7 +18,7 @@ def play():
     word = get_word()
     word_letters = set(word)
     user_letters = ""
-    print(f"men{len(word)} ta harfli son o'yladim topa olasizmi? ")
+    print(f"men{len(word)} ta harfli so'z o'yladim topa olasizmi? ")
     while len(word_letters) > 0:
         print(display(user_letters, word))
         if len(user_letters) > 0:
@@ -35,5 +34,3 @@ def play():
             print("Bunday harf yo'q")
         user_letters += letter
     print(f"Tabriklayman {word} so'zini {len(user_letters)} ta urinish bilan topdingiz")
-    
-play()
